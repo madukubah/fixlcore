@@ -24,14 +24,17 @@
             <div class="form-group form-float">
                 <div class="form-line">
                     <?php
+
                         $form = array(
                             'name' => $form_name,
                             'id' => $form_name,
                             'type' => $attr['type'],
                             'placeholder' => ( isset( $attr['label'] )  ) ? $attr['label'] : '' ,
                             'class' => 'form-control',  
+                            
                         );
-                        if( isset( $attr['readonly'] ) )  $form['readonly'] = '';
+                        
+                        $form['readonly'] = '';
 
                         switch(  $attr['type'] )
                         {
@@ -82,5 +85,6 @@
         </div>
 <?php endforeach; ?>
 </div>
+
 
 <!--  -->

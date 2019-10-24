@@ -41,7 +41,7 @@
             </div>
             <div class="card-body">
               <!--  -->
-              <?php echo form_open();  ?>
+              <?php echo form_open_multipart();  ?>
               <?php echo (isset($contents)) ? $contents : '';  ?>
               <button class="btn btn-bold btn-success btn-sm " style="margin-left: 5px;" type="submit">
                 Simpan

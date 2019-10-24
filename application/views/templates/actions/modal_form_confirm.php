@@ -12,8 +12,10 @@
     <div class="modal-content ">
         <?php echo form_open( $url );?>
         <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><?php echo $name?></h4>
+            <h5 class="modal-title"><?php echo $name ?></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
         <div class="modal-body ">
             <div style="word-wrap: break-word;" class="alert alert-success">
