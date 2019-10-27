@@ -5,7 +5,7 @@ repo ini adalah starter untuk membuat aplikasi yang merupakak framework CodeIgni
 2. rest api ( untuk membuat service API )
 ![Screenshot](OVERVIEW/0.PNG)
 ![Screenshot](OVERVIEW/1.PNG)
-* kelebihan dari core ini adalah adanya template untuk meng-generate widget seperti tabel, modal, form.
+# kelebihan dari core ini adalah adanya template untuk meng-generate widget seperti tabel, modal, form.
 
 berikut contohnya 
 1. pembuatan tabel
@@ -92,7 +92,7 @@ $this->render( "templates/contents/plain_content" );
 - hasil 
 ![Screenshot](OVERVIEW/3.PNG)
 
-* jadi kita tidak perlu lagi membuat html tabel, apa lagi sampai bermacam- macam tabel
+# jadi kita tidak perlu lagi membuat html tabel, apa lagi sampai bermacam- macam tabel
 
 2. pebuatan form
 ```
