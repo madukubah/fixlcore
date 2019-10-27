@@ -62,4 +62,127 @@ berikut contohnya
   }
   
 ```
+- code diatas di simpan di dalam folder ``library`` yang kemudian di panggil dalam controller
+```
+//code dalam kontroller
+
+$table = $this->services->get_table_config( $this->current_page ); // 
+$table[ "rows" ] = $this->ion_auth->users_limit( $pagination['limit_per_page'], $pagination['start_record']  )->result(); 
+$table = $this->load->view('templates/tables/plain_table', $table, true);
+$this->data[ "contents" ] = $table; // variabel ini akan di kirim kedalam view
+$this->render( "templates/contents/plain_content" );
+
+```
+- potongan code dalam view 
+```
+         </div>
+            </div>
+            <div class="card-body">
+              <!--  -->
+              <?php echo (isset($contents)) ? $contents : '';  ?> // ini akan menampilkan tabel
+              <!--  -->
+              <!--  -->
+              <?php echo (isset($pagination_links)) ? $pagination_links : '';  ?>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+```
+- hasil 
+
+jadi kita tidak perlu lagi membuat html tabel, apa lagi sampai bermacam- macam tabel
+
 2. pebuatan form
+```
+public function get_form_data_readonly( $user_id = -1 )
+{
+	if( $user_id != -1 )
+	{
+		$user 				= $this->ion_auth_model->user( $user_id )->row();
+		$this->identity		=$user->username;
+		$this->first_name	=$user->first_name;
+		$this->last_name	=$user->last_name;
+		$this->phone		=$user->phone;
+		$this->id			=$user->user_id;
+		$this->email		=$user->email;
+		$this->group_id		=$user->group_id;
+		$this->address		=$user->address;
+
+	}
+
+	$groups =$this->ion_auth_model->groups(  )->result();
+	$group_select = array();
+	foreach( $groups as $group )
+	{
+		// if( $group->id == 1 ) continue;
+		$group_select[ $group->id ] = $group->name;
+	}
+
+	$_data["form_data"] = array(
+		"id" => array(
+			'type' => 'hidden',
+			'label' => "ID",
+			'value' => $this->form_validation->set_value('id', $this->id),
+		  ),
+		"first_name" => array(
+		  'type' => 'text',
+		  'label' => "Nama Depan",
+		  'value' => $this->form_validation->set_value('first_name', $this->first_name),
+		),
+		"last_name" => array(
+		  'type' => 'text',
+		  'label' => "Nama Belakang",
+		  'value' => $this->form_validation->set_value('last_name', $this->last_name),
+		),
+		"email" => array(
+		  'type' => 'text',
+		  'label' => "Email",
+		  'value' => $this->form_validation->set_value('email', $this->email),			  
+		),
+		"address" => array(
+			'type' => 'text',
+			'label' => "Alamat",
+			'value' => $this->form_validation->set_value('address', $this->address),			  
+		  ),
+		"phone" => array(
+		  'type' => 'number',
+		  'label' => "Nomor Telepon",
+		  'value' => $this->form_validation->set_value('phone', $this->phone),			  
+		),
+		"group_id" => array(
+			'type' => 'text',
+			'label' => "User Group",
+			'value' => $group_select[ $this->group_id ],
+		),
+	  );
+	return $_data;
+}
+```
+- code diatas di simpan di dalam folder ``library`` yang kemudian di panggil dalam controller
+```
+//code dalam kontroller
+ $form_data = $this->ion_auth->get_form_data();
+$form_data = $this->load->view('templates/form/plain_form', $form_data , TRUE ) ;
+
+$this->data[ "contents" ] =  $form_data;
+```
+- potongan code dalam view 
+```
+         </div>
+            </div>
+            <div class="card-body">
+              <!--  -->
+              <?php echo (isset($contents)) ? $contents : '';  ?> // ini akan menampilkan tabel
+              <!--  -->
+              <!--  -->
+              <?php echo (isset($pagination_links)) ? $pagination_links : '';  ?>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+```
+- Hasil 
+
+
+untuk menelusurinya lebih dalam, silahkan download repositorinya :)
+
