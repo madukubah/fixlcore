@@ -8,7 +8,7 @@ repo ini adalah starter untuk membuat aplikasi yang merupakak framework CodeIgni
 <b> kelebihan dari core ini adalah adanya template untuk meng-generate widget seperti tabel, modal, form. </b>
 
 berikut contohnya 
-1. pembuatan tabel
+# 1. pembuatan tabel
 
 ```
   public function get_table_config( $_page, $start_number = 1 )
@@ -94,7 +94,7 @@ $this->render( "templates/contents/plain_content" );
 
 <b> jadi kita tidak perlu lagi membuat html tabel, apa lagi sampai bermacam- macam tabel </b>
 
-2. pebuatan form
+# 2. pebuatan form
 ```
 public function get_form_data_readonly( $user_id = -1 )
 {
