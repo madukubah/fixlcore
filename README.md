@@ -1,6 +1,5 @@
-###################
-Fixlcore
-###################
+### Fixlcore
+
 repo ini adalah starter untuk membuat aplikasi yang merupakak framework CodeIgniter yang telah ditambahkan beberapa library 
 1. ion auth ( untuk login dan register serta user management )
 2. rest api ( untuk membuat service API )
