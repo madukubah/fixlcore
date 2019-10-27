@@ -94,7 +94,7 @@ $this->render( "templates/contents/plain_content" );
 
 <b> jadi kita tidak perlu lagi membuat html tabel, apa lagi sampai bermacam- macam tabel </b>
 
-# 2. pebuatan form
+# 2. pembuatan form
 ```
 public function get_form_data_readonly( $user_id = -1 )
 {
