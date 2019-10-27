@@ -3,7 +3,8 @@
 repo ini adalah starter untuk membuat aplikasi yang merupakak framework CodeIgniter yang telah ditambahkan beberapa library 
 1. ion auth ( untuk login dan register serta user management )
 2. rest api ( untuk membuat service API )
-
+![Screenshot](OVERVIEW/0.PNG)
+![Screenshot](OVERVIEW/1.PNG)
 kelebihan dari core ini adalah adanya template untuk meng-generate widget seperti tabel, modal, form.
 
 berikut contohnya 
@@ -89,6 +90,7 @@ $this->render( "templates/contents/plain_content" );
         </div>
 ```
 - hasil 
+![Screenshot](OVERVIEW/3.PNG)
 
 jadi kita tidak perlu lagi membuat html tabel, apa lagi sampai bermacam- macam tabel
 
@@ -182,7 +184,7 @@ $this->data[ "contents" ] =  $form_data;
         </div>
 ```
 - Hasil 
-
+![Screenshot](OVERVIEW/4.PNG)
 
 untuk menelusurinya lebih dalam, silahkan download repositorinya :)
 
