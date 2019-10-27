@@ -4,7 +4,8 @@ repo ini adalah starter untuk membuat aplikasi yang merupakak framework CodeIgni
 1. ion auth ( untuk login dan register serta user management )
 2. rest api ( untuk membuat service API )
 
-kelebihan dari core ini adalah adanya template untuk meng-generate widget seperti tabel, modal, form
+kelebihan dari core ini adalah adanya template untuk meng-generate widget seperti tabel, modal, form.
+
 berikut contohnya 
 1. pembuatan tabel
 
