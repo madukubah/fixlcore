@@ -45,6 +45,7 @@ class User_services
   
   public function get_table_config( $_page, $start_number = 1 )
   {
+	// sesuaikan nama tabel header yang akan d tampilkan dengan nama atribut dari tabel yang ada dalam database
     $table["header"] = array(
 			'username' => 'username',
 			'group_name' => 'Group',
