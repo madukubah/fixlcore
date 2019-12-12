@@ -115,20 +115,6 @@ class Group_model extends MY_Model
 
       return $this;
   }
-  // /**
-  //  * groups
-  //  *
-  //  *
-  //  * @return static
-  //  * @author madukubah
-  //  */
-  // public function groups(  )
-  // {
-      
-  //     $this->order_by($this->table.'.id', 'asc');
-  //     return $this->fetch_data();
-  // }
-
   /**
    * groups
    *

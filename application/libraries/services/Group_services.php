@@ -2,10 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Group_services
 {
-
-
   function __construct(){
-
   }
 
   public function __get($var)
